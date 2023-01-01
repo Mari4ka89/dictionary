@@ -17,6 +17,7 @@ export default function SearchForm({ handleSearch, defaultKeyword }) {
       <input
         type="search"
         placeholder="Enter word"
+        className="form-control form-control-lg"
         defaultValue={defaultKeyword}
         autoFocus={true}
         onChange={handleWordChange}

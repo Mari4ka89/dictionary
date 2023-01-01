@@ -28,7 +28,7 @@ export default function Dictionary({ defaultKeyword }) {
   }
 
   function search(keyword) {
-    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+    const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
 
     axios.get(apiUrl).then(handleResponse);
   }
@@ -36,7 +36,7 @@ export default function Dictionary({ defaultKeyword }) {
   if (loaded) {
     return (
       <div className="Dictionary">
-        <SearchForm handleSearch={search} />
+        <SearchForm handleSearch={search} defaultKeyword={defaultKeyword} />
         <Result definition={definition} />
       </div>
     );
